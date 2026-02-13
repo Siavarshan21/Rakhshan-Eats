@@ -1,0 +1,93 @@
+/* ---------------------------------------------------------------------------
+ * Font Face Declarations
+ * Fonts are loaded via Google Fonts CDN in index.html.
+ * This file provides fallback @font-face rules and utility classes
+ * for the typefaces used across the application.
+ *
+ * Primary fonts loaded from CDN:
+ *   - Inter (300, 400, 500, 600, 700)
+ *   - Plus Jakarta Sans (500, 600, 700, 800)
+ * --------------------------------------------------------------------------- */
+
+/* --- Font-display strategy for CDN fonts --- */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: local('Inter');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500 800;
+  font-display: swap;
+  src: local('Plus Jakarta Sans');
+}
+
+/* --- Font utility classes --- */
+.font-body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.font-heading {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+}
+
+.font-code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* --- Font weight utilities --- */
+.fw-light { font-weight: 300; }
+.fw-regular { font-weight: 400; }
+.fw-medium { font-weight: 500; }
+.fw-semibold { font-weight: 600; }
+.fw-bold { font-weight: 700; }
+.fw-extrabold { font-weight: 800; }
+
+/* --- Typographic presets --- */
+.type-display {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.type-heading {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.type-subheading {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.type-body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.type-caption {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.type-overline {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 0.625rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
